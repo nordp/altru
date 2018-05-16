@@ -1,6 +1,6 @@
 {
   "name": "altru",
-  "app_id": "",
+  "app_id": "27d9eb95",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
