@@ -1,8 +1,11 @@
-<ion-card tappable (click)="openDetails(campaign)">
-  <img [src]="campaign.image"/>
-  <div class="card-title"> {{ campaign.name }} </div>
-  <div class="card-subtitle"> {{ campaign.organisation }} </div>
-  <prog class="card-campaign-progress" [progress]="(campaign.raised / campaign.goal * 100) || 0"></prog>
-  <div class="card-raised"> {{ campaign.raised || 0 }} kr</div>
-  <div class="card-raised-title">Insamlat:</div>
-</ion-card>
+<ion-card tappable margin-bottom (click)="openDetails(campaign)">
+  <div class="campaign-container" [style.backgroundImage]="'url(' + campaign?.image + ')'">
+    <h1 class="campaign-name">{{campaign?.name}}</h1>
+    <p class="campaign-organisation">{{campaign?.organisation}}</p>
+    <div class="card-bottom">
+      <prog class="card-campaign-progress" [progress]="(campaign?.raised / campaign?.goal * 100) || 0"></prog>
+      <div class="campaign-raised">
+        <h2 no-margin>{{ campaign.raised || 0 }} kr</h2>
+      </div>
+    </div>
+  </div>

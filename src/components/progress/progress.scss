@@ -1,15 +1,16 @@
 prog {
-    .container {
-        height: 100%;
-        border-radius: 20px;
-        box-shadow: 5px;
-        background-color: white;
-        height: 100%;
-        padding: 2%;
-        .fill {
-            border-radius: 20px;
-            height: 100%;
-            background-color: blueviolet;
-        }
+  .container {
+    height: 100%;
+    border-radius: 4px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    
+    .fill {
+      border-radius: 2px;
+      height: 100%;
+      background-color: #9E005D;
     }
+  }
 }
