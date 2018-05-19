@@ -26,6 +26,7 @@ export class CampaignDetailsPage implements OnInit {
 
   ngOnInit() {
     this.campaign = this.navParams.get('item');
+    console.log(this.campaign);
   }
 
   makeDonation() {

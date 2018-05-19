@@ -8,7 +8,7 @@
       </ion-fab>
       <div class="header-info">
         <div class="organisation-logo-wrap">
-          <img src="http://lorempixel.com/50/50">
+          <div [style.backgroundImage]="'url(' + campaign?.icon + ')'"></div>
         </div>
         <div class="campaign-info">
           <h3 no-margin class="campaign-name">{{campaign?.name}}</h3>
@@ -26,9 +26,6 @@
 </ion-content>
 
 <ion-footer>
-  <!--<ion-toolbar>
-    <ion-title>Footer</ion-title>
-  </ion-toolbar>-->
   <div margin-top class="donation-wrap">
     <div class="donation-range-wrap">
       <ion-item padding-right>
@@ -36,7 +33,7 @@
       </ion-item>
     </div>
     <div padding-right class="donation-button-wrap">
-      <button ion-button color="secondary" (click)="makeDonation()">Donera 💩</button>
+      <button ion-button color="primary" (click)="makeDonation()">Donera 💩</button>
     </div>
   </div>
 </ion-footer>
