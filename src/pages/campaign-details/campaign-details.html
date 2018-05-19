@@ -2,6 +2,11 @@
 
   <div class="image-wrap" [style.backgroundImage]="'url(' + campaign?.image + ')'">
     <div class="gradient">
+    <ion-fab fab-size="50px" (click)="navigateBack()">
+      <button ion-fab class="navigate-back-button">
+        <ion-icon name="arrow-round-back"></ion-icon>
+      </button>
+    </ion-fab>
     <div class="header-info">
       <div class="organisation-logo-wrap">
         <img src="http://lorempixel.com/50/50">
@@ -14,8 +19,11 @@
     </div>
   </div>
 
-  <div class="description-wrap">
+  <div padding class="description-wrap">
     <p>{{campaign?.description}}</p>
+  </div>
+  <div padding-left padding-right padding-bottom class="tags">
+      <ion-badge *ngFor="let tag of campaign?.tags" item-end>{{tag}}</ion-badge>
   </div>
 
   <button ion-button color="light" round (click)="makeDonation()">GIVE A 💩</button>

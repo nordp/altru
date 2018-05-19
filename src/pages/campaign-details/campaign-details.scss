@@ -60,3 +60,25 @@
     line-height: 1.5;
   }
 }
+
+ion-fab {
+  position: absolute;
+  top: 32px;
+  left: 16px;
+
+  .navigate-back-button {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+
+    ion-icon {
+      background: transparent;
+      color: #fff;
+    }
+  }
+}
+
+.tags ion-badge {
+  margin-right: 4px;
+  margin-bottom: 4px;
+}

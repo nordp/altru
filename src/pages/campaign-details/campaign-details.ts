@@ -19,11 +19,11 @@ export class CampaignDetailsPage implements OnInit {
     private dp: DonationsProvider, 
     private swish: SwishProvider,
     private device: Device,
+    private navCtrl: NavController
   ) {}
 
   ngOnInit() {
     this.campaign = this.navParams.get('item');
-    console.log(this.campaign);
   }
   
   amount: number = 10
@@ -39,5 +39,10 @@ export class CampaignDetailsPage implements OnInit {
     console.log(donation);
     this.dp.saveDonation(donation);
     window.open(this.swish.createPaymentURL(this.campaign.number, this.amount),'_system');
+
+  }
+
+  navigateBack() {
+    this.navCtrl.popToRoot();
   }
 }
