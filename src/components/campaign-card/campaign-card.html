@@ -1,6 +1,5 @@
-<ion-card>
+<ion-card tappable (click)="openDetails(campaign)">
   <img [src]="campaign.image"/>
   <div class="card-title"> {{ campaign.name }} </div>
   <div class="card-subtitle"> {{ campaign.tags[0] }} </div>
-  <button ion-button (click)="openDetails(campaign)">Visa mer</button>
 </ion-card>
