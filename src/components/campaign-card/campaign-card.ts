@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Campaign } from '../../models/campaign';
+import { CampaignDetailsPage } from '../../pages/campaign-details/campaign-details';
+import { NavController } from 'ionic-angular';
 
 /**
  * Generated class for the CampaignCardComponent component.
@@ -12,9 +14,18 @@ import { Campaign } from '../../models/campaign';
   templateUrl: 'campaign-card.html'
 })
 export class CampaignCardComponent {
-
   @Input() campaign: Campaign
 
-  constructor() {}
+  constructor(
+    private navCtrl: NavController
+  ) {}
 
+
+  openDetails(event, campaign) {
+    this.navCtrl.push(CampaignDetailsPage, {
+      item: campaign
+    });
+  }
 }
+
+
