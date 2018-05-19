@@ -18,6 +18,7 @@ import { FcmProvider } from '../providers/fcm/fcm';
 import { HttpClientModule } from '@angular/common/http';
 import { CampaignCardComponent } from '../components/campaign-card/campaign-card';
 import { CampaignDetailsPage } from '../pages/campaign-details/campaign-details';
+import { SwishProvider } from '../providers/swish/swish';
 
 const firebase = {
     apiKey: "AIzaSyANKE5pJbthY5wzPAFwg2qx0RdMj86OuMM",
@@ -60,7 +61,8 @@ const firebase = {
     Firebase,
     FcmProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    FcmProvider
+    FcmProvider,
+    SwishProvider
   ]
 })
 export class AppModule {}
