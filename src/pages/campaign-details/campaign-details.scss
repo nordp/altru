@@ -81,6 +81,7 @@ ion-fab {
 .tags ion-badge {
   margin-right: 4px;
   margin-bottom: 4px;
+  background-color: #9E005D;
 }
 
 .donation-wrap {
@@ -94,4 +95,21 @@ ion-fab {
       border: none;
     }
   }
+
+  .donation-button-wrap {
+    button {
+      width: 150px;
+      font-weight: bold;
+      background-color: #9E005D;
+    }
+  }
+}
+
+.range-pin {
+  -webkit-transform: translate3d(0, 0, 0) scale(1) !important;
+  transform        : translate3d(0, 0, 0) scale(1) !important;
+  background-color: #9E005D !important;
+  padding: 3px 8px !important;
+  color: #fff !important;
+  font-weight: bold !important;
 }

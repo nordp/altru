@@ -13,8 +13,9 @@ import { SwishProvider } from '../../providers/swish/swish';
   providers: [DonationsProvider]
 })
 export class CampaignDetailsPage implements OnInit {
-
   @Input() campaign: Campaign;
+  amount: number = 10
+
   constructor(
     private navParams: NavParams,
     private dp: DonationsProvider, 
@@ -26,8 +27,6 @@ export class CampaignDetailsPage implements OnInit {
   ngOnInit() {
     this.campaign = this.navParams.get('item');
   }
-  
-  amount: number = 10
 
   makeDonation() {
     let donation: Donation = {
@@ -40,7 +39,6 @@ export class CampaignDetailsPage implements OnInit {
     console.log(donation);
     this.dp.saveDonation(donation);
     window.open(this.swish.createPaymentURL(this.campaign.number, this.amount, 'I give ' + this.amount + ' about : ' + this.campaign.name + '.'),'_system');
-
   }
 
   navigateBack() {
