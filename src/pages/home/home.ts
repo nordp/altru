@@ -43,18 +43,14 @@ export class HomePage {
     .map(actions => {
       return actions
         .filter(campaign => {
-          console.log('hej');
           if (this.filter) {
-            const regexp = new RegExp(`/${this.filter.toLowerCase()}.*/`, 'g');
+            const regexp = new RegExp(`${this.filter.toLowerCase()}.*`, 'g');
             const data = campaign.payload.doc.data() as Campaign;
             const tagMatch = data.tags.some(tag => {
-              console.log(tag.match(regexp))
-              console.log(this.filter);
               return tag.match(regexp) !== null
             });
             const nameMatch = data.name.toLowerCase().match(regexp) !== null;
             console.log(tagMatch);
-            console.log(nameMatch);
             return tagMatch || nameMatch;
           } else {
             return true;
