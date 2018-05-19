@@ -14,6 +14,7 @@ import { Firebase } from '@ionic-native/firebase';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { FcmProvider } from '../providers/fcm/fcm';
 
 const firebase = {
   apiKey: "AIzaSyANKE5pJbthY5wzPAFwg2qx0RdMj86OuMM",
@@ -50,7 +51,9 @@ const firebase = {
     StatusBar,
     SplashScreen,
     Firebase,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    FcmProvider,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    FcmProvider
   ]
 })
 export class AppModule {}
