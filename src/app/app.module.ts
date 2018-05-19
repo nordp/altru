@@ -15,6 +15,7 @@ import { Firebase } from '@ionic-native/firebase';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { FcmProvider } from '../providers/fcm/fcm';
+import { HttpClientModule } from '@angular/common/http';
 
 const firebase = {
   apiKey: "AIzaSyANKE5pJbthY5wzPAFwg2qx0RdMj86OuMM",
@@ -37,7 +38,8 @@ const firebase = {
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebase), 
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
