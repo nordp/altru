@@ -18,8 +18,8 @@ export class HomePage {
     this.items = db.collection<Campaign>('campaigns').snapshotChanges().map(actions => {
       return actions.map(a => {
         const data = a.payload.doc.data() as Campaign;
-        const campaignId = a.payload.doc.id;
-        return { campaignId, ...data };
+        const id = a.payload.doc.id;
+        return { id, ...data };
       });
     });
   }

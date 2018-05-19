@@ -5,6 +5,7 @@ import { DonationsProvider } from '../../providers/donations/donations';
 import { Donation } from '../../models/donation';
 import { Campaign } from '../../models/campaign';
 import { Device } from '@ionic-native/device';
+import { SwishProvider } from '../../providers/swish/swish';
 
 @Component({
   selector: 'page-campaign-details',
@@ -16,7 +17,8 @@ export class CampaignDetailsPage implements OnInit {
   constructor(
     private navParams: NavParams,
     private dp: DonationsProvider, 
-    private device: Device
+    private swish: SwishProvider,
+    private device: Device,
   ) {}
 
   ngOnInit() {
@@ -24,14 +26,18 @@ export class CampaignDetailsPage implements OnInit {
     console.log(this.campaign);
   }
   
-  amount: number
+  amount: number = 10
 
   makeDonation(){
     let donation: Donation = {
       amount: this.amount,
       organisationId: this.campaign.organisationId,
-      userId: this.device.uuid,
+      userId: this.device.uuid || 'simulated',
       campaignId: this.campaign.id,
     }
+
+    console.log(donation);
+    this.dp.saveDonation(donation);
+    window.open(this.swish.createPaymentURL(this.campaign.number, this.amount),'_system');
   }
 }
