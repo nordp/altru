@@ -24,7 +24,7 @@ export class SwishProvider {
         "editable":false
       },
       "message": {
-        "value":,
+        "value":"",
         "editable":false}
       }`)}`
   }
