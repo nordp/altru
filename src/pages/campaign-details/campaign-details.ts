@@ -1,13 +1,21 @@
-import { Component, Input } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Component, Input, OnInit } from '@angular/core';
+import { NavController, NavParams } from 'ionic-angular';
+import { Campaign } from '../../models/campaign';
 
 @Component({
   selector: 'page-campaign-details',
   templateUrl: 'campaign-details.html'
 })
-export class CampaignDetailsPage {
+export class CampaignDetailsPage implements OnInit {
 
-  @Input() campaign: any;
+  campaign: Campaign;
 
-  constructor() {} 
+  constructor(
+    private navParams: NavParams
+  ) {}
+
+  ngOnInit() {
+    this.campaign = this.navParams.get('item');
+    console.log(this.campaign);
+  }
 }

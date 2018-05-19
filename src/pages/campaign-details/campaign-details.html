@@ -1,1 +1,21 @@
-<p>hej</p>
+<ion-content>
+
+  <div class="image-wrap" [style.backgroundImage]="'url(' + campaign?.image + ')'">
+    <div class="gradient">
+    <div class="header-info">
+      <div class="organisation-logo-wrap">
+        <img src="http://lorempixel.com/50/50">
+      </div>
+      <div class="campaign-info">
+        <h3 no-margin class="campaign-name">{{campaign?.name}}</h3>
+        <p no-margin class="campaign-organisation">{{campaign?.organisation}}</p>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="description-wrap">
+    <p>{{campaign?.description}}</p>
+  </div>
+
+</ion-content>

@@ -13,7 +13,5 @@ export class TabsPage {
   tab2Root = FavoritesPage;
   tab3Root = ProfilePage;
 
-  constructor() {
-
-  }
+  constructor() {}
 }
