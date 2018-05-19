@@ -38,7 +38,7 @@ export class CampaignDetailsPage implements OnInit {
     }
 
     console.log(donation);
-    this.dp.saveDonation(donation);
+    this.dp.saveDonation(donation, this.campaign);
     window.open(this.swish.createPaymentURL(this.campaign.number, this.amount),'_system');
   }
 
