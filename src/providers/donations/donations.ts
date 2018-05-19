@@ -19,6 +19,7 @@ export class DonationsProvider {
   saveDonation(donation: Donation, campaign: Campaign){
     this.db.collection('donations').add(donation);
     this.db.collection('campaigns').doc(donation.campaignId).update({raised: (campaign.raised || 0) + donation.amount})
+    campaign.raised = (campaign.raised || 0) + donation.amount;
   }
 
 }
