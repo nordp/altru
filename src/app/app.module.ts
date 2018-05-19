@@ -20,6 +20,7 @@ import { CampaignCardComponent } from '../components/campaign-card/campaign-card
 import { CampaignDetailsPage } from '../pages/campaign-details/campaign-details';
 import { SwishProvider } from '../providers/swish/swish';
 import { Device } from '@ionic-native/device';
+import { DonationsProvider } from '../providers/donations/donations';
 
 const firebase = {
     apiKey: "AIzaSyANKE5pJbthY5wzPAFwg2qx0RdMj86OuMM",
@@ -64,7 +65,8 @@ const firebase = {
     Device,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     FcmProvider,
-    SwishProvider
+    SwishProvider,
+    DonationsProvider
   ]
 })
 export class AppModule {}
