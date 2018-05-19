@@ -1,5 +1,5 @@
 export interface Campaign{
-    img: string,
+    image: string,
     title: string,
     description: string
 }
