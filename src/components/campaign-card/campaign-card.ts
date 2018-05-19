@@ -21,7 +21,7 @@ export class CampaignCardComponent {
   ) {}
 
 
-  openDetails(event, campaign) {
+  openDetails(campaign) {
     this.navCtrl.push(CampaignDetailsPage, {
       item: campaign
     });
