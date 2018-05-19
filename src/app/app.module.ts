@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CampaignCardComponent } from '../components/campaign-card/campaign-card';
 import { CampaignDetailsPage } from '../pages/campaign-details/campaign-details';
 import { SwishProvider } from '../providers/swish/swish';
+import { Device } from '@ionic-native/device';
 
 const firebase = {
     apiKey: "AIzaSyANKE5pJbthY5wzPAFwg2qx0RdMj86OuMM",
@@ -60,6 +61,7 @@ const firebase = {
     SplashScreen,
     Firebase,
     FcmProvider,
+    Device,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     FcmProvider,
     SwishProvider

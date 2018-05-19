@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Firebase } from '@ionic-native/firebase';
+import { Device } from '@ionic-native/device'
 import { Platform } from 'ionic-angular';
 import { AngularFirestore } from 'angularfire2/firestore';
 
@@ -18,6 +19,7 @@ export class FcmProvider {
     public http: HttpClient,
     private firebaseNative: Firebase,
     private platform: Platform,
+    private device: Device,
     private afs: AngularFirestore
   ) {
     console.log('Hello FcmProvider Provider');
@@ -45,11 +47,12 @@ export class FcmProvider {
     const devicesRef = this.afs.collection('devices')
   
     const docData = { 
+      uuid: this.device.uuid,
       token,
-      userId: 'testUser',
+      platform: this.device.platform,
     }
   
-    return devicesRef.doc(token).set(docData)
+    return devicesRef.doc(this.device.uuid).set(docData)
   }
 
   listenToNotifications() {
