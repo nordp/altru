@@ -1,11 +1,5 @@
 <ion-card>
   <img [src]="campaign.image"/>
-  <ion-card-content>
-    <ion-card-title>
-      {{ campaign.title }}
-      </ion-card-title>
-    <p>
-      {{ campaign.description }}
-    </p>
-  </ion-card-content>
+  <div class="card-title"> {{ campaign.name }} </div>
+  <div class="card-subtitle"> {{ campaign.tags[0] }} </div>
 </ion-card>
