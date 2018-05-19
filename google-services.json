@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "787317789913",
+    "firebase_url": "https://altru-app.firebaseio.com",
+    "project_id": "altru-app",
+    "storage_bucket": "altru-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787317789913:android:766c57eed3ff1407",
+        "android_client_info": {
+          "package_name": "se.pajtek.altru"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787317789913-tkvpc6avf193spclp3admiin51488tn0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "***REMOVED***"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

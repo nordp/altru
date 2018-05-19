@@ -16,7 +16,12 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 const firebase = {
- // your firebase web config
+  apiKey: "AIzaSyANKE5pJbthY5wzPAFwg2qx0RdMj86OuMM",
+    authDomain: "altru-app.firebaseapp.com",
+    databaseURL: "https://altru-app.firebaseio.com",
+    projectId: "altru-app",
+    storageBucket: "altru-app.appspot.com",
+    messagingSenderId: "787317789913"
 }
 
 @NgModule({
