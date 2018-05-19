@@ -3,7 +3,7 @@
     <name>Altru</name>
     <description>Give less, help more.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Pajtek</author>
-    <content original-src="index.html" src="http://192.168.2.21:8100" />
+    <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -79,6 +79,7 @@
     <allow-navigation href="http://192.168.0.3:8100" />
     <allow-navigation href="http://192.168.2.21:8100" />
     <engine name="ios" spec="^4.5.4" />
+    <engine name="browser" spec="5.0.3" />
     <plugin name="cordova-plugin-firebase" spec="^1.0.5" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
     <plugin name="cordova-plugin-device" spec="^2.0.2" />
