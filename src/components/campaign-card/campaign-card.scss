@@ -5,12 +5,10 @@ campaign-card {
     width: 100%;
     
     .campaign-container {
-      height: 30vh;
+      height: 220px;
       display: flex;
       background-size: cover;
       background-position: center center;
-      // align-items: center;
-      // justify-content: center;
       flex-direction: column;
       text-align: left;
       padding: 16px;
@@ -42,7 +40,7 @@ campaign-card {
           width: 100%;
         }
         .campaign-raised {
-          width: 50%;
+          width: 100%;
           
           h2 {
             text-align: right;

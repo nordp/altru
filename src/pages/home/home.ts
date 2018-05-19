@@ -46,8 +46,9 @@ export class HomePage {
           if (this.filter) {
             const regexp = new RegExp(`${this.filter.toLowerCase()}.*`, 'g');
             const data = campaign.payload.doc.data() as Campaign;
+            console.log(data.tags);
             const tagMatch = data.tags.some(tag => {
-              return tag.match(regexp) !== null
+              return tag.match(regexp) !== null;
             });
             const nameMatch = data.name.toLowerCase().match(regexp) !== null;
             console.log(tagMatch);
