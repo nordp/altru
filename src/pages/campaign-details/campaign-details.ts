@@ -9,7 +9,8 @@ import { SwishProvider } from '../../providers/swish/swish';
 
 @Component({
   selector: 'page-campaign-details',
-  templateUrl: 'campaign-details.html'
+  templateUrl: 'campaign-details.html',
+  providers: [DonationsProvider]
 })
 export class CampaignDetailsPage implements OnInit {
 
@@ -28,7 +29,7 @@ export class CampaignDetailsPage implements OnInit {
   
   amount: number = 10
 
-  makeDonation(){
+  makeDonation() {
     let donation: Donation = {
       amount: this.amount,
       organisationId: this.campaign.organisationId,

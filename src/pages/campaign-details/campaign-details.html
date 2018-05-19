@@ -19,13 +19,22 @@
     </div>
   </div>
 
+  <div margin-top class="donation-wrap">
+    <div class="donation-range-wrap">
+      <ion-item padding-right>
+        <!--<ion-label>Välj summa</ion-label>-->
+        <ion-range min="10" max="100" step="10" snaps="true" color="secondary" [(ngModel)]="amount"></ion-range>
+      </ion-item>
+    </div>
+    <div padding-right class="donation-button-wrap">
+      <button ion-button color="secondary" (click)="makeDonation()">GIVE {{amount}} 💩</button>
+    </div>
+  </div>
+
   <div padding class="description-wrap">
     <p>{{campaign?.description}}</p>
   </div>
   <div padding-left padding-right padding-bottom class="tags">
       <ion-badge *ngFor="let tag of campaign?.tags" item-end>{{tag}}</ion-badge>
   </div>
-
-  <button ion-button color="light" round (click)="makeDonation()">GIVE A 💩</button>
-
 </ion-content>

@@ -82,3 +82,16 @@ ion-fab {
   margin-right: 4px;
   margin-bottom: 4px;
 }
+
+.donation-wrap {
+  display: flex;
+  align-items: center;
+
+  .donation-range-wrap {
+    flex-grow: 1;
+
+    .item-inner {
+      border: none;
+    }
+  }
+}
