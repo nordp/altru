@@ -3,9 +3,9 @@
     <h1 class="campaign-name">{{campaign?.name}}</h1>
     <p class="campaign-organisation">{{campaign?.organisation}}</p>
     <div class="card-bottom">
-      <prog class="card-campaign-progress" [progress]="(campaign?.raised / campaign?.goal * 100) || 0"></prog>
       <div class="campaign-raised">
-        <h2 no-margin>{{ campaign.raised || 0 }} kr</h2>
+        <h2>{{ campaign.raised || 0 }} kr</h2>
       </div>
+      <prog class="card-campaign-progress" [progress]="(campaign?.raised / campaign?.goal * 100) || 0"></prog>
     </div>
   </div>

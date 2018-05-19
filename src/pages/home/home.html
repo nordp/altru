@@ -11,7 +11,7 @@
     (ionCancel)="getItems()">
   </ion-searchbar>
   
-  <campaign-card *ngFor="let campaign of filteredItems | async"
+  <campaign-card *ngFor="let campaign of items | async"
        [campaign]="campaign"></campaign-card>
 
 </ion-content>
