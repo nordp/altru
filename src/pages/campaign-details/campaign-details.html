@@ -1,38 +1,42 @@
-<ion-content>
-
+<ion-content class="details-content">
   <div class="image-wrap" [style.backgroundImage]="'url(' + campaign?.image + ')'">
     <div class="gradient">
-    <ion-fab fab-size="50px" (click)="navigateBack()">
-      <button ion-fab class="navigate-back-button">
-        <ion-icon name="arrow-round-back"></ion-icon>
-      </button>
-    </ion-fab>
-    <div class="header-info">
-      <div class="organisation-logo-wrap">
-        <img src="http://lorempixel.com/50/50">
+      <ion-fab fab-size="50px" (click)="navigateBack()">
+        <button ion-fab class="navigate-back-button">
+          <ion-icon name="arrow-round-back"></ion-icon>
+        </button>
+      </ion-fab>
+      <div class="header-info">
+        <div class="organisation-logo-wrap">
+          <img src="http://lorempixel.com/50/50">
+        </div>
+        <div class="campaign-info">
+          <h3 no-margin class="campaign-name">{{campaign?.name}}</h3>
+          <p no-margin class="campaign-organisation">{{campaign?.organisation}}</p>
+        </div>
       </div>
-      <div class="campaign-info">
-        <h3 no-margin class="campaign-name">{{campaign?.name}}</h3>
-        <p no-margin class="campaign-organisation">{{campaign?.organisation}}</p>
-      </div>
-    </div>
     </div>
   </div>
-
   <div padding class="description-wrap">
     <p>{{campaign?.description}}</p>
   </div>
   <div padding-left padding-right padding-bottom class="tags">
-      <ion-badge *ngFor="let tag of campaign?.tags" item-end>{{tag}}</ion-badge>
+    <ion-badge *ngFor="let tag of campaign?.tags" item-end>{{tag}}</ion-badge>
   </div>
-  <div margin-top class="donation-wrap">
-      <div class="donation-range-wrap">
-        <ion-item padding-right>
-          <ion-range pin="true" min="10" max="100" step="10" snaps="true" color="#9E005D" [(ngModel)]="amount"></ion-range>
-        </ion-item>
-      </div>
-      <div padding-right class="donation-button-wrap">
-        <button ion-button color="secondary" (click)="makeDonation()">Donera 💩</button>
-      </div>
-    </div>
 </ion-content>
+
+<ion-footer>
+  <!--<ion-toolbar>
+    <ion-title>Footer</ion-title>
+  </ion-toolbar>-->
+  <div margin-top class="donation-wrap">
+    <div class="donation-range-wrap">
+      <ion-item padding-right>
+        <ion-range pin="true" min="10" max="100" step="10" snaps="true" color="primary" [(ngModel)]="amount"></ion-range>
+      </ion-item>
+    </div>
+    <div padding-right class="donation-button-wrap">
+      <button ion-button color="secondary" (click)="makeDonation()">Donera 💩</button>
+    </div>
+  </div>
+</ion-footer>
