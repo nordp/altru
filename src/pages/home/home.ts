@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
 import { AngularFirestore } from 'angularfire2/firestore';
+import { Campaign } from '../../models/campaign';
 
 @Component({
   selector: 'page-home',
@@ -13,7 +14,7 @@ export class HomePage {
     public navCtrl: NavController,
     public db: AngularFirestore,
   ) {
-    this.items = db.collection('items').valueChanges();
+    this.items = db.collection('campaigns').valueChanges();
   }
 
 }
