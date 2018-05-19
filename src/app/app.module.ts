@@ -17,6 +17,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { FcmProvider } from '../providers/fcm/fcm';
 import { HttpClientModule } from '@angular/common/http';
 import { CampaignCardComponent } from '../components/campaign-card/campaign-card';
+import { ProgressComponent } from '../components/progress/progress';
 import { CampaignDetailsPage } from '../pages/campaign-details/campaign-details';
 import { SwishProvider } from '../providers/swish/swish';
 import { Device } from '@ionic-native/device';
@@ -39,6 +40,7 @@ const firebase = {
     HomePage,
     TabsPage,
     CampaignCardComponent,
+    ProgressComponent,
     CampaignDetailsPage
   ],
   imports: [

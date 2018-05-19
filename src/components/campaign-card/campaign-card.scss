@@ -2,6 +2,7 @@ campaign-card {
     ion-card {
         position: relative;
         text-align: center;
+        width: 100%;
       }
     
       .card-title {
@@ -11,6 +12,7 @@ campaign-card {
         width: 100%;
         font-weight: bold;
         color: #fff;
+        box-shadow: 2px;
       }
     
       .card-subtitle {
@@ -19,5 +21,32 @@ campaign-card {
         top: 52%;
         width: 100%;
         color: #fff;
+        box-shadow: 1px;
+
+      }
+
+      .card-campaign-progress {
+        position: absolute;
+        height: 10%;
+        width: 50%;
+        bottom: 5%;
+        left: 5%;
+      }
+
+      .card-raised {
+        position: absolute;
+        right:5%;
+        bottom:1%;
+        color: white;
+        font-size: 2.0em;
+        font-weight: bold;
+      }
+
+      .card-raised-title {
+        color: white;
+        position: absolute;
+        font-size: 0.8em;
+        right:15%;
+        bottom:15%;
       }
 }

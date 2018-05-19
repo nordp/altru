@@ -11,7 +11,7 @@ export class SwishProvider {
 
   constructor() {}
 
-  createPaymentURL(receiver: number, amount: number, message: string){
+  createPaymentURL(receiver: number, amount: number){
   return `swish://payment/?data=${encodeURI(
     `{
       "version":1,
@@ -20,11 +20,11 @@ export class SwishProvider {
         "editable":false
       },
       "amount": {
-        "value":"${amount}",
+        "value": ${amount},
         "editable":false
       },
       "message": {
-        "value":"${message}",
+        "value":,
         "editable":false}
       }`)}`
   }

@@ -1,6 +1,7 @@
 export interface Campaign{
     id: string,
     image: string,
+    icon: string,
     name: string,
     description: string,
     number: number,
