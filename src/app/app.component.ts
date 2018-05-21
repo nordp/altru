@@ -23,7 +23,7 @@ export class MyApp {
     private fcm: FcmProvider,
     private toastCtrl: ToastController
   ) {
-    platform.ready().then(() => {
+    /*platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
 
@@ -43,8 +43,8 @@ export class MyApp {
       )
       .subscribe()
       statusBar.styleDefault();
-      splashScreen.hide();
-    });
+    });*/
+    splashScreen.hide();
   }
 
   
